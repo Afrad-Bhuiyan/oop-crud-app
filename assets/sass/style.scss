@@ -1,0 +1,47 @@
+@import "global";
+
+.all-records{
+    table{
+
+        thead{
+            font-size: 1.8rem;
+            background-color: $primary;
+        }
+        tbody{
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.add-records,
+.edit-records{
+    form{
+        .form-field{
+            // border: 1px solid  black;
+            margin-bottom: 3rem;
+            input,
+            select{
+                width: 100%;
+                padding: 13px 10px;
+                font-size: 1.8rem;
+                font-weight: 400;
+                border: .1rem solid #eee;
+                border-radius: .25rem;
+                color: $black;
+                &:focus{
+                    border: .1rem solid $primary;
+
+                }
+            }
+            .error-msg{
+                margin-top: 1rem;
+        
+                span{
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    color: #f03333;
+                }
+            }
+        }
+    }
+}

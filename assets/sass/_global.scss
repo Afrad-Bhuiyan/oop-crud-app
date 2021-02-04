@@ -1,0 +1,208 @@
+
+$primary:#36b332;
+$secondary: #23263a;
+$white:#FDFDFD;
+$black: #232323;
+$h1-size:5rem;
+$h2-size:5rem / 100 * 75;
+$h3-size:5rem / 100 * 60;
+$h4-size:5rem / 100 * 50;
+$h5-size:5rem / 100 * 40;
+$h6-size:5rem / 100 * 35;
+$font-poppins:'Poppins', sans-serif;
+$breakpoint-xs:0px;
+$breakpoint-sm:576px;
+$breakpoint-md:768px;
+$breakpoint-lg:992px;
+$breakpoint-xl:1200px;
+
+//color for .btn
+$btn-text: $black;
+$btn-bg: #eee;
+
+//color for .btn.btn-primary
+$btn-primary-bg: $primary;
+$btn-primary-text:$white;
+$btn-primary-hover:#2e992a;
+$btn-primary-shadow:#2c9b28f0;
+$btn-primary-outline:$primary;
+$btn-primary-outline-hover-text:$white;
+
+//color for .btn.btn-secondary
+$btn-secondary-bg: $secondary;
+$btn-secondary-text:$white;
+$btn-secondary-hover:#13141b;
+$btn-secondary-shadow:#2e332c;
+$btn-secondary-outline:$secondary;
+$btn-secondary-outline-hover-text:$white;
+
+
+*,
+*::after,
+*::before,
+*:active,
+*:focus{
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+html{
+    font-size: 37.5%;//(16x37.5%=6px)
+}
+
+body{
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: $font-poppins;
+    line-height: 1.5;
+}
+
+h1{
+    font-size: $h1-size;
+    font-weight: 700;
+}
+
+h2{
+    font-size: $h2-size;
+}
+h3{
+    font-size: $h3-size;
+}
+h4{
+    font-size: $h4-size;
+}
+h5{
+    font-size: $h5-size;
+}
+h6{
+    font-size: $h6-size;
+}
+
+
+h2,h3,h4,h5,h6{
+    font-weight: 600;
+}
+
+.btn,
+button.btn,
+a.btn,
+input.btn,
+input.btn{
+
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    border: none;
+    color:$black;
+    background-color: $btn-bg;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    letter-spacing: .05rem;
+    cursor: pointer;
+    border-radius: .25rem;
+    transition: all 200ms ease-in-out;
+
+   
+    
+}
+.btn.btn-full{
+    width: 100%;
+    padding: 1.5rem 2rem !important;
+}
+
+
+.btn.btn-secondary{
+
+    color: $btn-secondary-text;
+    background-color: $btn-secondary-bg;
+    &:hover,
+    &:focus{
+        background-color:$btn-secondary-hover;
+    }
+    &:focus,
+    &:active{
+        box-shadow: 0px 0px .2rem .1rem $btn-secondary-shadow;
+    }
+    
+    &.btn-outline{
+        background-color: transparent;
+        border-radius: 3rem;
+        color: $btn-secondary-outline;
+        border: .25rem solid $btn-secondary-outline;
+        &:hover{
+            background-color: $btn-secondary-outline;
+            color: $btn-secondary-outline-hover-text ;
+        }
+    }
+    
+}
+
+.btn.btn-primary{
+
+    color: $btn-primary-text;
+    background-color: $btn-primary-bg;
+    &:hover,
+    &:focus{
+        background-color:$btn-primary-hover;
+    }
+    &:focus,
+    &:active{
+        box-shadow: 0px 0px .2rem .1rem $btn-primary-shadow;
+    }
+    
+    &.btn-outline{
+        background-color: transparent !important;
+        border-radius: 3rem;
+        color: $btn-primary-outline !important;
+        border: .25rem solid $btn-primary-outline;
+        &:hover{
+            background-color: $btn-primary-outline !important;
+            color: $btn-primary-outline-hover-text !important;
+        }
+    }
+    
+}
+
+.col-wrap{
+    width: 100%;
+    height: 100%;
+    &.full-width{
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+@media (min-width:$breakpoint-sm){
+
+    html{
+        font-size: 43.75%;//(16x43.75%=7px) 
+    }
+}
+
+@media (min-width:$breakpoint-md){
+
+    html{
+        font-size: 50%;//(16x50%=8px) 
+    }
+}
+
+@media (min-width:$breakpoint-lg){
+
+    html{
+        font-size: 56.25%;//(16x56.25%=9px) 
+    }
+}
+
+@media (min-width:$breakpoint-xl){
+
+    html{
+        font-size: 62.5%;//(16x62.5%=10px) 
+    }
+    .container, .container-sm, .container-md, .container-lg, .container-xl{
+        max-width: 1200px;
+    }
+}
+
